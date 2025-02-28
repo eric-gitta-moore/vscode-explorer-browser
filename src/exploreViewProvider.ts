@@ -52,7 +52,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
   }
 
   private _getHtmlForWebview(url: string = "") {
-    const configuration = vscode.workspace.getConfiguration("simpleBrowser");
+    const configuration = vscode.workspace.getConfiguration("explorerBrowser");
 
     const nonce = getNonce();
 

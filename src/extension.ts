@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 import { ExploreViewProvider } from "./exploreViewProvider";
 
-const showCommand = "simpleBrowser.show";
+const showCommand = "explorer-browser.open-url";
 
 export function activate(context: vscode.ExtensionContext) {
   const manager = new ExploreViewProvider(context.extensionUri);

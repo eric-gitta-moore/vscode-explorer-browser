@@ -1,0 +1,5 @@
+{
+	"displayName": "Explorer Browser",
+	"description": "A very basic built-in webview enhanced for displaying web content.",
+	"configuration.focusLockIndicator.enabled.description": "Enable/disable the floating indicator that shows when focused in the explorer browser."
+}

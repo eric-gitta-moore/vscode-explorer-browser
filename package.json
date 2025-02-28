@@ -1,7 +1,7 @@
 {
   "name": "explorer-browser",
-  "displayName": "explorer-browser",
-  "description": "",
+  "displayName": "%displayName%",
+  "description": "%description%",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.97.0"
@@ -17,15 +17,28 @@
         {
           "type": "webview",
           "id": "explorer-browser.view",
-          "name": "Explorer Browser"
+          "name": "%displayName%"
         }
       ]
     },
     "commands": [
       {
-        "command": "explorer-browser.show",
-        "title": "Show",
-        "category": "Explorer Browser"
+        "command": "explorer-browser.open-url",
+        "title": "Open URL",
+        "category": "%displayName%"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "%displayName%",
+        "properties": {
+          "explorerBrowser.focusLockIndicator.enabled": {
+            "type": "boolean",
+            "default": false,
+            "title": "Focus Lock Indicator Enabled",
+            "description": "%configuration.focusLockIndicator.enabled.description%"
+          }
+        }
       }
     ]
   },
