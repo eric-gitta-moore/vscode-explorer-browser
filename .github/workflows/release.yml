@@ -1,9 +1,6 @@
 name: Release Extension
 
 on:
-  push:
-    tags:
-      - "v*"
   workflow_dispatch:
     inputs:
       version:
@@ -70,7 +67,6 @@ jobs:
           git-message: 'chore(release): {version}'
           preset: 'angular'
           tag-prefix: 'v'
-          output-file: 'false'
           skip-version-file: 'true'
           skip-commit: 'true'
 
