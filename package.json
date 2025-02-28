@@ -3,11 +3,23 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "version": "0.0.1",
+  "icon": "media/icon.png",
+  "license": "MIT",
+  "author": {
+    "email": "EricGittaMoore@duck.com",
+    "name": "Eric Moore",
+    "url": "https://github.com/eric-gitta-moore"
+  },
+  "publisher": "eric-gitta-moore",
   "engines": {
     "vscode": "^1.97.0"
   },
   "categories": [
     "Other"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
   ],
   "repository": {
     "type": "git",
