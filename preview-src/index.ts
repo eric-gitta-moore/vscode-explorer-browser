@@ -96,6 +96,10 @@ onceDocumentLoaded(() => {
   input.value = settings.url;
 
   toggleFocusLockIndicatorEnabled(settings.focusLockIndicatorEnabled);
+
+  if (settings.hiddenAddressBar) {
+    document.body.classList.add("hidden-address-bar");
+  }
 });
 function navigateTo(rawUrl: string): void {
   try {

@@ -82,6 +82,10 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
                       "focusLockIndicator.enabled",
                       false
                     ),
+                    hiddenAddressBar: configuration.get<boolean>(
+                      "hiddenAddressBar",
+                      false
+                    )
                   })
                 )}">
   

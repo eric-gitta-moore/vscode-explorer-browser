@@ -71,6 +71,10 @@ button:focus {
 	margin: 0.4em 1em;
 }
 
+.hidden-address-bar .header {
+	display: none;
+}
+
 .url-input {
 	flex: 1;
 }
@@ -93,6 +97,13 @@ button:focus {
 	height: 100%;
 	display: flex;
 	justify-content: center;
+}
+
+body.hidden-address-bar {
+	grid-template-rows: 1fr;
+}
+
+body:not(.hidden-address-bar) .content {
 	position: relative;
 }
 
@@ -101,6 +112,9 @@ iframe {
 	height: 100%;
 	border: none;
 	background: white; /* Browsers default to a white background */
+}
+
+body:not(.hidden-address-bar) iframe {
 	position: absolute; /* 高度 100% 会跟错人，得 hack 一下，手动指定跟随的 relative */
 }
 

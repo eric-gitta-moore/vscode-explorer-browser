@@ -1,5 +1,6 @@
 {
 	"displayName": "Explorer Browser",
 	"description": "A very basic built-in webview enhanced for displaying web content.",
-	"configuration.focusLockIndicator.enabled.description": "Enable/disable the floating indicator that shows when focused in the explorer browser."
+	"configuration.focusLockIndicator.enabled.description": "Enable/disable the floating indicator that shows when focused in the explorer browser.",
+	"configuration.explorerBrowser.hiddenAddressBar.description": "Show/hidden the address bar at the top of the browser."
 }
