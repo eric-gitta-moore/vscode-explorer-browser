@@ -66,6 +66,8 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: "*.vsix"
+          tag_name: ${{ github.event.inputs.version }}
+          name: ${{ github.event.inputs.version }}
           body: ${{ steps.changelog.outputs.clean_changelog }}
           draft: false
           prerelease: false
