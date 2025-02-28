@@ -59,7 +59,7 @@ jobs:
           git-message: 'chore(release): {version}'
           preset: 'angular'
           tag-prefix: 'v'
-          output-file: 'CHANGELOG.md'
+          output-file: 'false'
           skip-version-file: 'true'
           skip-commit: 'true'
 
