@@ -9,33 +9,54 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
   "main": "./out/extension.js",
+  "browser": "./dist/browser/extension",
   "contributes": {
+    "views": {
+      "explorer": [
+        {
+          "type": "webview",
+          "id": "explorer-browser.view",
+          "name": "Explorer Browser"
+        }
+      ]
+    },
     "commands": [
       {
-        "command": "explorer-browser.helloWorld",
-        "title": "Hello World"
+        "command": "explorer-browser.show",
+        "title": "Show",
+        "category": "Explorer Browser"
       }
     ]
   },
   "scripts": {
-    "vscode:prepublish": "pnpm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "pnpm run compile && pnpm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "vscode:prepublish": "pnpm run build",
+    "build": "gulp",
+    "watch": "gulp watch",
+    "pretest": "pnpm run build && pnpm run lint",
+    "lint": "eslint src"
   },
   "devDependencies": {
-    "@types/vscode": "^1.97.0",
-    "@types/mocha": "^10.0.10",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
     "@typescript-eslint/eslint-plugin": "^8.22.0",
     "@typescript-eslint/parser": "^8.22.0",
+    "del": "^7.1.0",
+    "esbuild": "^0.20.1",
     "eslint": "^9.19.0",
-    "typescript": "^5.7.3",
-    "@vscode/test-cli": "^0.0.10",
-    "@vscode/test-electron": "^2.4.1"
+    "gulp": "^4.0.2",
+    "gulp-esbuild": "^0.12.0",
+    "gulp-rollup": "^2.17.0",
+    "typescript": "^5.7.3"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "es5-ext",
+      "esbuild",
+      "fsevents"
+    ]
   }
 }
