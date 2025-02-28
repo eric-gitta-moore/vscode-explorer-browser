@@ -10,6 +10,8 @@ async function clean() {
 
 // 构建 preview-src
 function buildPreview() {
+  gulp.src('node_modules/@vscode/codicons/dist/codicon.css').pipe(gulp.dest('media/'));
+  gulp.src('node_modules/@vscode/codicons/dist/codicon.ttf').pipe(gulp.dest('media/'));
   return gulp
     .src("preview-src/**/*.ts")
     .pipe(

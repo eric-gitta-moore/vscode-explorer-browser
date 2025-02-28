@@ -52,14 +52,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
 
     const mainJs = this.extensionResourceUrl("media", "index.js");
     const mainCss = this.extensionResourceUrl("media", "main.css");
-    // const codiconsFontUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'node_modules', 'vscode-codicons', 'dist', 'codicon.ttf'));
-
-    const codiconsUri = this.extensionResourceUrl(
-      "node_modules",
-      "@vscode/codicons",
-      "dist",
-      "codicon.css"
-    );
+    const codiconsUri = this.extensionResourceUrl("media", "codicon.css");
 
     return /* html */ `<!DOCTYPE html>
             <html>

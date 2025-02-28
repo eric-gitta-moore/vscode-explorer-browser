@@ -9,8 +9,12 @@
   "categories": [
     "Other"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eric-gitta-moore/tweb-inset-vscode.git"
+  },
   "main": "./out/extension.js",
-  "browser": "./dist/browser/extension",
+  "browser": "./out/extension.js",
   "contributes": {
     "views": {
       "explorer": [
@@ -63,7 +67,8 @@
     "gulp": "^4.0.2",
     "gulp-esbuild": "^0.12.0",
     "gulp-rollup": "^2.17.0",
-    "typescript": "^5.7.3"
+    "typescript": "^5.7.3",
+    "@vscode/codicons": "^0.0.36"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
@@ -72,7 +77,5 @@
       "fsevents"
     ]
   },
-  "dependencies": {
-    "@vscode/codicons": "^0.0.36"
-  }
+  "dependencies": {}
 }

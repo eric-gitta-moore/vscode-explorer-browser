@@ -15,7 +15,6 @@ test-workspace/**
 src/**
 tsconfig.json
 out/test/**
-out/**
 extension.webpack.config.js
 extension-browser.webpack.config.js
 cgmanifest.json
@@ -24,3 +23,6 @@ package-lock.json
 preview-src/**
 webpack.config.js
 esbuild-preview.js
+gulpfile.mjs
+pnpm-lock.yaml
+**/.gitignore
