@@ -51,6 +51,17 @@ jobs:
       - name: Install @vscode/vsce
         run: pnpm add -g @vscode/vsce
 
+      - name: Update Version
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          VERSION=${{ github.event.inputs.version || github.ref_name }}
+          VERSION=${VERSION#v}
+          npm version $VERSION --no-git-tag-version
+          git add package.json
+          git commit -m "chore(release): v$VERSION"
+          git push
+
       - name: Generate Changelog
         id: changelog
         uses: TriPSs/conventional-changelog-action@v5
