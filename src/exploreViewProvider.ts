@@ -25,12 +25,6 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
 
     webviewView.webview.onDidReceiveMessage((data) => {
       switch (data.type) {
-        case "colorSelected": {
-          vscode.window.activeTextEditor?.insertSnippet(
-            new vscode.SnippetString(`#${data.value}`)
-          );
-          break;
-        }
         case "openExternal": {
           try {
             const url = vscode.Uri.parse(data.url);
@@ -58,7 +52,14 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
 
     const mainJs = this.extensionResourceUrl("media", "index.js");
     const mainCss = this.extensionResourceUrl("media", "main.css");
-    // const codiconsUri = this.extensionResourceUrl("media", "codicon.css");
+    // const codiconsFontUri = webview.asWebviewUri(vscode.Uri.joinPath(extensionUri, 'node_modules', 'vscode-codicons', 'dist', 'codicon.ttf'));
+
+    const codiconsUri = this.extensionResourceUrl(
+      "node_modules",
+      "@vscode/codicons",
+      "dist",
+      "codicon.css"
+    );
 
     return /* html */ `<!DOCTYPE html>
             <html>
@@ -67,7 +68,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
   
                 <meta http-equiv="Content-Security-Policy" content="
                     default-src 'none';
-                    font-src data:;
+                    font-src ${this._view!.webview.cspSource} data:;
                     style-src ${this._view!.webview.cspSource};
                     script-src 'nonce-${nonce}';
                     frame-src *;
@@ -84,7 +85,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
                 )}">
   
                 <link rel="stylesheet" type="text/css" href="${mainCss}">
-                <link rel="stylesheet" type="text/css" href="${`codiconsUri`}">
+                <link rel="stylesheet" type="text/css" href="${codiconsUri}">
             </head>
             <body>
                 <header class="header">
