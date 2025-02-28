@@ -74,7 +74,7 @@ jobs:
         run: pnpm run build
 
       - name: Package Extension
-        run: vsce package
+        run: pnpx @vscode/vsce package
 
       - name: Create Release
         uses: softprops/action-gh-release@v1

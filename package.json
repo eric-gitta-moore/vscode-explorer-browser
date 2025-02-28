@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "icon": "media/icon.png",
   "license": "MIT",
+  "packageManager": "pnpm@10.5.0",
   "author": {
     "email": "EricGittaMoore@duck.com",
     "name": "Eric Moore",
