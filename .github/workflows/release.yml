@@ -43,10 +43,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install
-
-      - name: Install @vscode/vsce
-        run: pnpm add -g @vscode/vsce
+        run: pnpm install --frozen-lockfile
 
       - name: Generate Changelog
         id: changelog
