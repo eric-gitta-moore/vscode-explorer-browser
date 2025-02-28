@@ -84,11 +84,16 @@ button:focus {
 	margin-right: 0.3em;
 }
 
+.controls button.open-external-button {
+	margin-right: 0;
+}
+
 .content {
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
+	position: relative;
 }
 
 iframe {
@@ -96,6 +101,7 @@ iframe {
 	height: 100%;
 	border: none;
 	background: white; /* Browsers default to a white background */
+	position: absolute; /* 高度 100% 会跟错人，得 hack 一下，手动指定跟随的 relative */
 }
 
 .iframe-focused-alert {
