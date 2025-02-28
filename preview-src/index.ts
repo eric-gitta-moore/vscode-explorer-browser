@@ -43,6 +43,12 @@ window.addEventListener("message", (e) => {
       toggleFocusLockIndicatorEnabled(e.data.enabled);
       break;
     }
+    case "navigateTo": {
+      const url = e.data.url;
+      input.value = url;
+      input.dispatchEvent(new Event("change"));
+      break;
+    }
   }
 });
 
@@ -90,24 +96,22 @@ onceDocumentLoaded(() => {
   input.value = settings.url;
 
   toggleFocusLockIndicatorEnabled(settings.focusLockIndicatorEnabled);
-
-  function navigateTo(rawUrl: string): void {
-    try {
-      const url = new URL(rawUrl);
-
-      // Try to bust the cache for the iframe
-      // There does not appear to be any way to reliably do this except modifying the url
-      url.searchParams.append("vscodeBrowserReqId", Date.now().toString());
-
-      iframe.src = url.toString();
-    } catch {
-      iframe.src = rawUrl;
-    }
-
-    vscode.setState({ url: rawUrl });
-  }
 });
+function navigateTo(rawUrl: string): void {
+  try {
+    const url = new URL(rawUrl);
 
+    // Try to bust the cache for the iframe
+    // There does not appear to be any way to reliably do this except modifying the url
+    url.searchParams.append("vscodeBrowserReqId", Date.now().toString());
+
+    iframe.src = url.toString();
+  } catch {
+    iframe.src = rawUrl;
+  }
+
+  vscode.setState({ url: rawUrl });
+}
 function toggleFocusLockIndicatorEnabled(enabled: boolean) {
   if (!enabled) return;
   document.body.classList.toggle("enable-focus-lock-indicator", enabled);

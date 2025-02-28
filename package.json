@@ -34,7 +34,8 @@
         {
           "type": "webview",
           "id": "explorer-browser.view",
-          "name": "%displayName%"
+          "name": "%displayName%",
+          "when": "explorerBrowser.isShow"
         }
       ]
     },

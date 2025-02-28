@@ -13,6 +13,8 @@ export function activate(context: vscode.ExtensionContext) {
     )
   );
 
+  vscode.commands.executeCommand("setContext", "explorerBrowser.isShow", false);
+
   context.subscriptions.push(
     vscode.commands.registerCommand(showCommand, async (url?: string) => {
       if (!url) {
@@ -23,6 +25,11 @@ export function activate(context: vscode.ExtensionContext) {
       }
 
       if (url) {
+        await vscode.commands.executeCommand(
+          "setContext",
+          "explorerBrowser.isShow",
+          true
+        );
         manager.show(url);
       }
     })
