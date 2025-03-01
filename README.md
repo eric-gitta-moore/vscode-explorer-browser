@@ -16,11 +16,21 @@ A lightweight VSCode extension that allows you to browse web content directly wi
 
 ## Installation
 
-Search for "Explorer Browser" in the VSCode extension marketplace, or install using the following command:
+There are two ways to install Explorer Browser:
 
-```bash
-code --install-extension eric-gitta-moore.explorer-browser
-```
+1. Install from VSCode Extension Marketplace:
+   - Search for "Explorer Browser" in the VSCode extension marketplace, or
+   - Use the following command:
+   ```bash
+   code --install-extension eric-gitta-moore.explorer-browser
+   ```
+
+2. Manual Installation:
+   - Download the .vsix file from the [Releases page](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases)
+   - In VSCode, go to Extensions view (Ctrl+Shift+X)
+   - Click the ... (More Actions) button at the top of the Extensions view
+   - Select "Install from VSIX..."
+   - Choose the downloaded .vsix file
 
 ## Usage
 
