@@ -1,6 +1,6 @@
 # Explorer Browser
 
-[简体中文](README.CN.md) | [English](./README.md)
+[.vsix 插件包](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases) | [简体中文](README.CN.md) | [English](./README.md)
 
 一个轻量级的VSCode内置浏览器扩展，让你可以直接在VSCode的资源管理器中浏览网页内容。
 
