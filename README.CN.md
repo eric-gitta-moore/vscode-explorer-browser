@@ -16,11 +16,21 @@
 
 ## 安装
 
-在VSCode扩展市场中搜索"Explorer Browser"并安装，或者通过以下命令安装：
+安装 Explorer Browser 有两种方式：
 
-```bash
-code --install-extension eric-gitta-moore.explorer-browser
-```
+1. 从VSCode扩展市场安装：
+   - 在VSCode扩展市场中搜索"Explorer Browser"并安装，或
+   - 使用以下命令安装：
+   ```bash
+   code --install-extension eric-gitta-moore.explorer-browser
+   ```
+
+2. 手动安装：
+   - 从[Releases页面](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases)下载.vsix文件
+   - 在VSCode中，打开扩展视图（Ctrl+Shift+X）
+   - 点击扩展视图顶部的...（更多操作）按钮
+   - 选择"从VSIX安装..."
+   - 选择下载好的.vsix文件
 
 ## 使用方法
 
