@@ -79,3 +79,7 @@ pnpm install
 ## Author
 
 [Eric Moore](https://github.com/eric-gitta-moore)
+
+## Reference
+- [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)
+- [vscode built-in vscode.simple-browser](https://github.com/microsoft/vscode/tree/main/extensions/simple-browser)
