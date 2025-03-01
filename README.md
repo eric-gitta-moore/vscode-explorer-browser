@@ -38,6 +38,7 @@ code --install-extension eric-gitta-moore.explorer-browser
 The following options can be configured in VSCode settings:
 
 - `explorerBrowser.focusLockIndicator.enabled`: Enable/disable focus lock indicator (default: false)
+- `explorerBrowser.hiddenAddressBar`: Show/hide the address bar at the top of the browser (default: false)
 
 ## Development
 

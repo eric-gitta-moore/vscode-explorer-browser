@@ -2,8 +2,6 @@
 
 [简体中文](README.CN.md) | [English](./README.md)
 
-![demo](https://github.com/user-attachments/assets/8ffe4298-358b-44cb-86ee-191d0a0f0292)
-
 一个轻量级的VSCode内置浏览器扩展，让你可以直接在VSCode的资源管理器中浏览网页内容。
 
 ## 功能特点
@@ -38,6 +36,7 @@ code --install-extension eric-gitta-moore.explorer-browser
 在VSCode设置中可以配置以下选项：
 
 - `explorerBrowser.focusLockIndicator.enabled`: 启用/禁用焦点锁定指示器（默认：false）
+- `explorerBrowser.hiddenAddressBar`: 显示/隐藏浏览器顶部的地址栏（默认：false）
 
 ## 开发
 
