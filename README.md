@@ -2,9 +2,9 @@
 
 [.vsix Installer](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases) | [简体中文](README.CN.md) | [English](./README.md)
 
-![demo](https://github.com/user-attachments/assets/8ffe4298-358b-44cb-86ee-191d0a0f0292)
-
 A lightweight VSCode extension that allows you to browse web content directly within VSCode's explorer view.
+
+![demo](https://github.com/user-attachments/assets/8ffe4298-358b-44cb-86ee-191d0a0f0292)
 
 ## Features
 

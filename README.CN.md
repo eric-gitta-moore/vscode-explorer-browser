@@ -4,6 +4,8 @@
 
 一个轻量级的VSCode内置浏览器扩展，让你可以直接在VSCode的资源管理器中浏览网页内容。
 
+![demo](https://github.com/user-attachments/assets/8ffe4298-358b-44cb-86ee-191d0a0f0292)
+
 ## 功能特点
 
 - 🌐 在VSCode资源管理器中直接打开网页
