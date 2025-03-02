@@ -56,6 +56,17 @@ jobs:
           skip-version-file: 'true'
           skip-commit: 'true'
 
+      - name: Update Version
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          VERSION=${{ github.event.inputs.version || github.ref_name }}
+          VERSION=${VERSION#v}
+          npm version $VERSION --no-git-tag-version
+          git add package.json
+          git commit -m "chore(release): v$VERSION"
+          git push
+
       - name: Build Extension
         run: pnpm run build
 
@@ -72,15 +83,6 @@ jobs:
           draft: false
           prerelease: false
 
-      - name: Update Version
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email 'github-actions[bot]@users.noreply.github.com'
-          VERSION=${{ github.event.inputs.version || github.ref_name }}
-          npm version $VERSION --no-git-tag-version
-          git add package.json
-          git commit -m "chore(release): v$VERSION"
-          git push
 
       # - name: Publish to Marketplace
       #   run: vsce publish -p ${{ secrets.VSCE_PAT }}
