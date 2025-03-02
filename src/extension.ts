@@ -19,7 +19,7 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(showCommand, async (url?: string) => {
       if (!url) {
         url = await vscode.window.showInputBox({
-          value: "https://example.com",
+          placeHolder: "https://example.com",
           prompt: vscode.l10n.t("Enter url to visit"),
         });
       }
