@@ -106,7 +106,7 @@ body.hidden-address-bar {
 body:not(.hidden-address-bar) .content {
 	position: relative;
 }
-body:.hidden-address-bar .content {
+body.hidden-address-bar .content {
 	position: absolute; /* 不设置这个 height 100% 会异常 */
 }
 
