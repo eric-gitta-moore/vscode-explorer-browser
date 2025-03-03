@@ -4,9 +4,11 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "explorer-browser.view";
 
   private _view?: vscode.WebviewView;
-  private initUrl: string = "";
 
-  constructor(private readonly _extensionUri: vscode.Uri) {}
+  constructor(
+    private readonly _extensionUri: vscode.Uri,
+    private initUrl: string = ""
+  ) {}
 
   public resolveWebviewView(
     webviewView: vscode.WebviewView,

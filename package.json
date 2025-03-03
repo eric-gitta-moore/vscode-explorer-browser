@@ -28,6 +28,9 @@
   },
   "main": "./out/extension.js",
   "browser": "./out/extension.js",
+  "activationEvents": [
+    "*"
+  ],
   "contributes": {
     "views": {
       "explorer": [
@@ -43,6 +46,11 @@
       {
         "command": "explorer-browser.open-url",
         "title": "Open URL",
+        "category": "%displayName%"
+      },
+      {
+        "command": "explorer-browser.toggle-explorer",
+        "title": "Toggle Explorer",
         "category": "%displayName%"
       }
     ],
