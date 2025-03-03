@@ -4,8 +4,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
   public static readonly viewType = "explorer-browser.view";
 
   private _view?: vscode.WebviewView;
-  private isInitialized: boolean = false;
-  public initUrl: string = "";
+  private initUrl: string = "";
 
   constructor(private readonly _extensionUri: vscode.Uri) {}
 
@@ -14,7 +13,6 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
     _context: vscode.WebviewViewResolveContext,
     _token: vscode.CancellationToken
   ) {
-    this.isInitialized = true;
     this._view = webviewView;
 
     webviewView.webview.options = {
@@ -24,7 +22,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
       localResourceRoots: [this._extensionUri],
     };
 
-    webviewView.webview.html = this._getHtmlForWebview();
+    webviewView.webview.html = this._getHtmlForWebview(this.initUrl);
 
     webviewView.webview.onDidReceiveMessage((data) => {
       switch (data.type) {
@@ -42,7 +40,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
   }
 
   public show(url: string) {
-    if (!this.isInitialized) this.initUrl = url;
+    this.initUrl = url;
     if (this._view) {
       this._view.show?.(true); // `show` is not implemented in 1.49 but is for 1.50 insiders
       this._view.webview.postMessage({
@@ -52,8 +50,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
     }
   }
 
-  private _getHtmlForWebview(url?: string) {
-    if(!url) url = this.initUrl;
+  private _getHtmlForWebview(url: string = "") {
     const configuration = vscode.workspace.getConfiguration("explorerBrowser");
 
     const nonce = getNonce();
@@ -85,7 +82,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
                     hiddenAddressBar: configuration.get<boolean>(
                       "hiddenAddressBar",
                       false
-                    )
+                    ),
                   })
                 )}">
   

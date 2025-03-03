@@ -111,7 +111,7 @@ iframe {
 	width: 100%;
 	height: 100%;
 	border: none;
-	background: white; /* Browsers default to a white background */
+	background: transparent; /* Browsers default to a white background */
 }
 
 body:not(.hidden-address-bar) iframe {
