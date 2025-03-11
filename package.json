@@ -2,7 +2,7 @@
   "name": "explorer-browser",
   "displayName": "%displayName%",
   "description": "%description%",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "icon": "",
   "license": "MIT",
   "packageManager": "pnpm@10.5.0",
