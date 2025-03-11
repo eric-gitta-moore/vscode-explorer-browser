@@ -3,7 +3,7 @@
   "displayName": "%displayName%",
   "description": "%description%",
   "version": "0.0.9",
-  "icon": "media/icon.png",
+  "icon": "",
   "license": "MIT",
   "packageManager": "pnpm@10.5.0",
   "author": {
