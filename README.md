@@ -83,3 +83,13 @@ pnpm install
 ## Reference
 - [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)
 - [vscode built-in vscode.simple-browser](https://github.com/microsoft/vscode/tree/main/extensions/simple-browser)
+
+## FAQ
+
+### Why can't I open the page when installed on github.dev?
+
+> Reference: https://stackoverflow.com/a/70969504/16834604
+
+Because github.dev has set `Cross-Origin-Embedder-Policy: require-corp`, we need to remove it.
+
+You can use the `ModHeader - Modify HTTP headers` browser extension to modify the response headers.
