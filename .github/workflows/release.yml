@@ -84,6 +84,6 @@ jobs:
           prerelease: false
 
       - name: Publish to Marketplace
-        run: vsce publish
+        run: pnpx @vscode/vsce publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
