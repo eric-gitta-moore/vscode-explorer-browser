@@ -1,6 +1,6 @@
 {
 	"displayName": "Explorer Browser",
-	"description": "A very basic built-in webview enhanced for displaying web content.",
+	"description": "A lightweight VSCode extension that allows you to browse web content directly within VSCode's explorer view.",
 	"configuration.focusLockIndicator.enabled.description": "Enable/disable the floating indicator that shows when focused in the explorer browser.",
 	"configuration.explorerBrowser.hiddenAddressBar.description": "Show/hidden the address bar at the top of the browser."
 }
