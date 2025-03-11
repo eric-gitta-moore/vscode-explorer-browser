@@ -1,6 +1,6 @@
 # Explorer Browser
 
-[.vsix Installer](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases) | [简体中文](README.CN.md) | [English](./README.md)
+[Extension Marketplace](https://marketplace.visualstudio.com/items?itemName=eric-gitta-moore.explorer-browser) | [.vsix Installer](https://github.com/eric-gitta-moore/vscode-explorer-browser/releases) | [简体中文](README.CN.md) | [English](./README.md)
 
 A lightweight VSCode extension that allows you to browse web content directly within VSCode's explorer view.
 
