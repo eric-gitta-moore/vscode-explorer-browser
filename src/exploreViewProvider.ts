@@ -91,7 +91,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
                 <link rel="stylesheet" type="text/css" href="${mainCss}">
                 <link rel="stylesheet" type="text/css" href="${codiconsUri}">
             </head>
-            <body>
+            <body class="simple-browser-body">
                 <header class="header">
                     <nav class="controls">
                         <button
@@ -119,7 +119,7 @@ export class ExploreViewProvider implements vscode.WebviewViewProvider {
                     <div class="iframe-focused-alert">${vscode.l10n.t(
                       "Focus Lock"
                     )}</div>
-                    <iframe sandbox="allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"></iframe>
+                    <iframe id="simple-browser-iframe" sandbox="allow-downloads allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation allow-top-navigation-to-custom-protocols"></iframe>
                 </div>
   
                 <script src="${mainJs}" nonce="${nonce}"></script>
