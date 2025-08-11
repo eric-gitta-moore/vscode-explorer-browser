@@ -76,13 +76,10 @@ pnpm install
 
 [MIT](LICENSE)
 
-## Author
-
-[Eric Moore](https://github.com/eric-gitta-moore)
-
 ## Reference
 - [vscode-extension-samples](https://github.com/microsoft/vscode-extension-samples)
 - [vscode built-in vscode.simple-browser](https://github.com/microsoft/vscode/tree/main/extensions/simple-browser)
+- [Telegram Web (tweb) VSCode 主题集成](https://github.com/eric-gitta-moore/telegram-tweb-vscode-integration)
 
 ## FAQ
 
