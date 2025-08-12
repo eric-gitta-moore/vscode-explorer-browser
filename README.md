@@ -8,7 +8,8 @@ A lightweight VSCode extension that allows you to browse web content directly wi
 
 ## Features
 
-- 🌐 Open web pages directly in VSCode explorer
+- 🌐 Support GitHub.dev and other web versions of VSCode.
+- 🔥 Open web pages directly in VSCode explorer
 - 🔄 Support basic browser operations (forward, back, refresh)
 - 🔒 Configurable focus lock indicator
 - 🔗 Open current page in external browser
